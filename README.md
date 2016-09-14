@@ -1,6 +1,6 @@
 # Coursera Assignment Template - Single Page Web Applications with AngularJS
 
-## Pre-requisite
+## Pre-requisites
 1. Node.js (see https://nodejs.org/ for installation and setup)
 2. [Bower](https://bower.io/): `npm install -g bower`
 3. [Grunt](http://gruntjs.com/): `npm install -g grunt-cli`
