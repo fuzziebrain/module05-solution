@@ -1,0 +1,28 @@
+{
+  "name": "jhu-angularjs-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuzziebrain/jhu-angularjs-starter.git"
+  },
+  "author": "Adrian Png <png.adrian@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fuzziebrain/jhu-angularjs-starter/issues"
+  },
+  "homepage": "https://github.com/fuzziebrain/jhu-angularjs-starter#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mkdir": "^1.0.0",
+    "main-bower-files": "^2.13.1"
+  }
+}

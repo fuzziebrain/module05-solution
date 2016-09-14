@@ -1,0 +1,21 @@
+{
+  "name": "module01-solution"
+  , "homepage": "https://fuzziebrain.github.io/jhu-angularjs-starter"
+  , "authors": [
+    "Adrian Png <png.adrian@yahoo.com>"
+  ]
+  , "description": "Coursera AngularJS Course - Assignment Template"
+  , "main": "index.html"
+  , "license": "MIT"
+  , "private": true
+  , "ignore": [
+    "**/.*"
+    , "node_modules"
+    , "bower_components"
+    , "test"
+    , "tests"
+  ]
+  , "dependencies": {
+    "angular": "angularjs#^1.5.8"
+  }
+}
