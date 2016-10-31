@@ -200,3 +200,16 @@ a[ui-sref="admin.auth"] {
   }
   /* End Header */
 }
+
+/** Customizations */
+form input {
+  color: black;
+}
+
+.ng-touched.ng-valid {
+  background-color: white;
+}
+
+.ng-touched.ng-invalid {
+  background-color: #E5B9B9;
+}

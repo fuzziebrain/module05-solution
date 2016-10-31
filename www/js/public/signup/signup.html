@@ -1,6 +1,75 @@
-<div class="container">
-  <h2 id="signup" class="text-center">Sign Up</h2>
-  <div class="text-center">
-    Here...
-  </div>
+<div class="container" >
+  <form name="signupForm" novalidate>
+    <h2 id="signup" class="text-center">Sign Up</h2>
+    <div class="row form-group">
+      <div class="col-md-2"><label for="firstName">First name</label></div>
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="firstName" ng-model="signupCtrl.member.firstName" required>
+      </div>
+      <div class="col-md-4">
+        <p ng-show="signupForm.member.firstName.$error.required && signupForm.member.firstName.$touched" class="form-text text-muted">
+          Your first name is required.
+        </p>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2"><label for="lastName">Last name</label></div>
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="lastName" ng-model="signupCtrl.member.lastName" required>
+      </div>
+      <div class="col-md-4">
+        <p ng-show="signupForm.member.lastName.$error.required && signupForm.member.lastName.$touched" class="form-text text-muted">
+          Your last name is required.
+        </p>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2"><label for="email">Email</label></div>
+      <div class="col-md-6">
+        <input type="email" class="form-control" name="email" ng-model="signupCtrl.member.email" required>
+      </div>
+      <div class="col-md-4">
+        <p ng-show="signupForm.member.email.$invalid && signupForm.member.email.$touched" class="form-text text-muted">
+          A valid email address is required.
+        </p>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2"><label for="phoneNumber">Phone number</label></div>
+      <div class="col-md-6">
+        <input type="phone" class="form-control" name="phoneNumber" ng-model="signupCtrl.member.phoneNumber" pattern="(\d{3})-(\d{3})-(\d{4})">
+      </div>
+      <div class="col-md-4">
+        <p ng-show="signupForm.member.phoneNumber.$invalid && signupForm.member.phoneNumber.$touched" class="form-text text-muted">
+          Phone number format is invalid.
+        </p>
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2"><label for="favouriteDish">Favourite Dish</label></div>
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="favouriteDish" ng-model="signupCtrl.member.favouriteDish">
+      </div>
+      <div class="col-md-4">
+        <p ng-show="signupCtrl.favouriteDish_invalid" class="form-text text-muted">
+          No such menu number exists.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-6"><button ng-click="signupCtrl.register()" ng-disabled="signupForm.$invalid || signupCtrl.completed" class="btn btn-primary">Submit</button></div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">&nbsp;</div>
+      <div class="col-md-6">&nbsp;</div>
+    </div>
+    <div class="row" ng-if="signupCtrl.completed">
+      <div class="col-md-8">
+        <div class="alert alert-success" role="alert">
+          Your information has been saved
+        </div>
+      </div>
+    </div>
+  </form>
 </div>

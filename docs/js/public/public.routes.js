@@ -46,6 +46,28 @@ function routeConfig ($stateProvider) {
       templateUrl: 'js/public/signup/signup.html',
       controller: 'SignupController',
       controllerAs: 'signupCtrl'
+    })
+    .state('public.myinfo', {
+      url: '/myinfo',
+      templateUrl: 'js/public/myinfo/myinfo.html',
+      controller: 'MyinfoController',
+      controllerAs: 'myinfoCtrl',
+      resolve: {
+        member: ['AccountService', function(AccountService) {
+          return AccountService.getMember();
+        }],
+        menuItem: ['MenuService', 'member', function(MenuService, member) {
+          if(member && member.favouriteDish) {
+            return MenuService.getMenuItem(member.favouriteDish)
+              .then(function(response) {
+                console.log('response data', response.data);
+                return response.data;
+              });
+          } else {
+            return null;
+          }
+        }]
+      }
     });
 }
 })();
