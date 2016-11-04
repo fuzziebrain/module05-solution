@@ -26,7 +26,7 @@
     <div class="row form-group">
       <div class="col-md-2"><label for="email">Email</label></div>
       <div class="col-md-6">
-        <input type="email" class="form-control" name="email" ng-model="signupCtrl.member.email" required>
+        <input type="email" class="form-control" name="email" ng-model="signupCtrl.member.email" placeholder="yourname@company.com" required>
       </div>
       <div class="col-md-4">
         <p ng-show="signupForm.member.email.$invalid && signupForm.member.email.$touched" class="form-text text-muted">
@@ -37,7 +37,7 @@
     <div class="row form-group">
       <div class="col-md-2"><label for="phoneNumber">Phone number</label></div>
       <div class="col-md-6">
-        <input type="phone" class="form-control" name="phoneNumber" ng-model="signupCtrl.member.phoneNumber" pattern="(\d{3})-(\d{3})-(\d{4})">
+        <input type="phone" class="form-control" name="phoneNumber" placeholder="555-555-5555" ng-model="signupCtrl.member.phoneNumber" pattern="(\d{3})-(\d{3})-(\d{4})">
       </div>
       <div class="col-md-4">
         <p ng-show="signupForm.member.phoneNumber.$invalid && signupForm.member.phoneNumber.$touched" class="form-text text-muted">
