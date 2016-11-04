@@ -7,7 +7,7 @@
         <input type="text" class="form-control" name="firstName" ng-model="signupCtrl.member.firstName" required>
       </div>
       <div class="col-md-4">
-        <p ng-show="signupForm.member.firstName.$error.required && signupForm.member.firstName.$touched" class="form-text text-muted">
+        <p ng-if="signupForm.firstName.$error.required && signupForm.firstName.$touched" class="form-text text-muted">
           Your first name is required.
         </p>
       </div>
@@ -18,7 +18,7 @@
         <input type="text" class="form-control" name="lastName" ng-model="signupCtrl.member.lastName" required>
       </div>
       <div class="col-md-4">
-        <p ng-show="signupForm.member.lastName.$error.required && signupForm.member.lastName.$touched" class="form-text text-muted">
+        <p ng-show="signupForm.lastName.$error.required && signupForm.lastName.$touched" class="form-text text-muted">
           Your last name is required.
         </p>
       </div>
@@ -29,7 +29,7 @@
         <input type="email" class="form-control" name="email" ng-model="signupCtrl.member.email" placeholder="yourname@company.com" required>
       </div>
       <div class="col-md-4">
-        <p ng-show="signupForm.member.email.$invalid && signupForm.member.email.$touched" class="form-text text-muted">
+        <p ng-show="signupForm.email.$invalid && signupForm.email.$touched" class="form-text text-muted">
           A valid email address is required.
         </p>
       </div>
@@ -40,7 +40,7 @@
         <input type="phone" class="form-control" name="phoneNumber" placeholder="555-555-5555" ng-model="signupCtrl.member.phoneNumber" pattern="(\d{3})-(\d{3})-(\d{4})">
       </div>
       <div class="col-md-4">
-        <p ng-show="signupForm.member.phoneNumber.$invalid && signupForm.member.phoneNumber.$touched" class="form-text text-muted">
+        <p ng-show="signupForm.phoneNumber.$invalid && signupForm.phoneNumber.$touched" class="form-text text-muted">
           Phone number format is invalid.
         </p>
       </div>
