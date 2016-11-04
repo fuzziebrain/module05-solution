@@ -48,9 +48,12 @@
     <div class="row form-group">
       <div class="col-md-2"><label for="favouriteDish">Favourite Dish</label></div>
       <div class="col-md-6">
-        <input type="text" class="form-control" name="favouriteDish" ng-model="signupCtrl.member.favouriteDish">
+        <input type="text" class="form-control" name="favouriteDish" required ng-model="signupCtrl.member.favouriteDish">
       </div>
       <div class="col-md-4">
+        <p ng-show="signupForm.favouriteDish.$error.required && signupForm.favouriteDish.$touched" class="form-text text-muted">
+          Please enter the menu number of your favourite dish.
+        </p>
         <p ng-show="signupCtrl.favouriteDish_invalid" class="form-text text-muted">
           No such menu number exists.
         </p>
